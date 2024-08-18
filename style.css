@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root{
+    --txtcolor:#FFFBE6;
+    --hcolor:#e31e24;
+}
+.pp-2{
+   
+    margin-left: 20px; 
+}
+.pp-2:hover{
+    color: var(--hcolor);
+}
+header{
+    background-color: green;
+   color:var(--txtcolor);
+   font-size: 1.2rem;
+   /* font-family: "New Amsterdam", sans-serif; */
+   font-weight: 100 !important;
+}
+
+.item:hover{
+    background-color:green !important;
+  
+}
+
+.slider{
+    color: #000 !important;
+}
