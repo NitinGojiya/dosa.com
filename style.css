@@ -9,7 +9,8 @@
 }
 
 header{
-    background-color: #073602;
+    /* background-color: #073602; */
+    background-color: rgba(17, 24, 39, 1);
    color:var(--txtcolor);
    font-size: 1.2rem;
    text-transform: capitalize;

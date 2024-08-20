@@ -265,7 +265,8 @@
 if(isset($_POST['place']))
 {
     $status="Paid";
-    $sql2 = "INSERT INTO `final_order`( `name`, `total`, `username`, `status`, `mobile`, `address`) VALUES ('$name','$total','$user','$status','$mobile','$address')";
+    $action="Not Accept";
+    $sql2 = "INSERT INTO `final_order`( `name`, `total`, `username`, `status`, `mobile`, `address`,`ostatus`) VALUES ('$name','$total','$user','$status','$mobile','$address','$action')";
     $result2 = mysqli_query($conn, $sql2);
     if ($result2) {
         // header("location:menu.php");

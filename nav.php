@@ -16,7 +16,7 @@
 <body>
   <header>
     <div class="hstack gap-3">
-      <div class="p-2" style="font-family:Matemasie;"><span style="color:red;font-size:2.1em;font-weight:500;">D</span>osa.com</div>
+      <div class="p-2" style="font-family:Matemasie;"><span style="color:red;font-size:2.1em;font-weight:500;">D</span>osa<span style="color:red;font-size:2.1em;font-weight:500;">B</span>ite</div>
       <div class="p-2 ms-auto pp-2"><a class="rr"  href="home.php">Home</a></div>
       <div class="vr"></div>
       <div class="p-2 pp-2 "> <a class="rr" href="
@@ -52,13 +52,28 @@
                    
                     
                     ?>
-      ">Your orders</a></div>
+      ">Your order</a></div>
       <div class="vr"></div>
       <div class="p-2 pp-2"><a class="rr" href="contact.php">Contact</a></div>
       <div class="vr"></div>
       <div class="p-2 pp-2"><a class="rr" href="about.php">About us</a></div>
       <div class="vr"></div>
-      <div class="p-2 pp-2"><a class="rr"  href="feedback.php">feedback</a></div>
+      <div class="p-2 pp-2"><a class="rr"  href="
+                 <?php 
+                 
+                 session_start();
+                    error_reporting(0);
+                    if($_SESSION['login']==true)
+                    {
+                        echo 'feedback_history.php';
+                    }
+                    else{
+                        echo "login.php";
+                    }
+                   
+                    
+                    ?>
+      ">History & feedback </a></div>
       <?php 
                  
                  session_start();
@@ -100,7 +115,28 @@
               ?>
            Total Bill :-<?php  echo $total;?></h5>
            &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="place_order.php">
+        <a href="
+           <?php 
+                 
+                
+                    error_reporting(0);
+                    if($cnt>0)
+                    {
+                    if($_SESSION['login']==true)
+                    {
+                        echo 'place_order.php';
+                    }
+                    else{
+                        echo "login.php";
+                    }
+                  }
+                  else{
+                    echo "";
+                  }
+                    
+                    ?>
+        
+        ">
            <input type="button" value="Place Order" class="btn btn-success"></a> <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
