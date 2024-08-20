@@ -98,7 +98,7 @@
          $cnt=mysqli_num_rows($result2);
           
         ?>
-        <font style="background-color:white;border:1px black solid;  padding:10px; color:black; border-radius: 50%;"><?php if($_SESSION['login']==true){echo $cnt;}   ?></font>
+        <font style="background-color:#198754;border:1px black solid;  padding:4px; color:#fff;"><?php if($_SESSION['login']==true){echo $cnt;}else{echo "0";}   ?></font>
         <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i></button>
 
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">

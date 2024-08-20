@@ -1,3 +1,7 @@
+
+<?php 
+  include 'nav.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -144,9 +148,7 @@
     </style>
 </head>
 <body>
- <?php 
-  include 'nav.php';
- ?>
+
     <section class="mlogin">
    
 <div class="form-container">
@@ -176,7 +178,7 @@
 			</div>
 		</div>
         
-		<button class="sign" name="signup">Sign in</button>
+		<button class="sign" name="signup">Sign Up</button>
 	</form>
 	<div class="social-message">
 		<div class="line"></div>

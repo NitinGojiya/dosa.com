@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<h3 style="color:white;">Nitin Ahir Dwarka</h3>
+<h3 style="color:white;">Krishna Dwarka</h3>
 <!-- The div element for the map -->
 <div id="map"></div>
 
@@ -32,7 +32,7 @@
 
     // Add a marker
     const marker = L.marker([22.2371, 68.9676]).addTo(map)
-        .bindPopup('<b>Nitin Ahir!</b><br />Dwarka .').openPopup();
+        .bindPopup('<b>Dwarka!</b><br />Dwarka .').openPopup();
 </script>
 
 </body>

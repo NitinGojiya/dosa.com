@@ -196,13 +196,13 @@ box-shadow:  20px 20px 60px #c4c2c2,
     <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
-      <img src="slider/download (1).jpeg" height="400px" class="d-block w-100" alt="...">
+      <img src="slider/Parotta with Beef.jpeg" height="500px" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item" data-bs-interval="2000">
-      <img src="slider/download (3).jpeg" height="400px" class="d-block w-100" alt="...">
+      <img src="slider/download (3).jpeg" height="500px" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="slider/download (2).jpeg" height="400px" class="d-block w-100" alt="...">
+      <img src="slider/download (2).jpeg" height="500px" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
