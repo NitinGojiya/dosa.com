@@ -4,8 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
+  <title>Home</title>
   <link href="style.css" rel="stylesheet">
+  <link href="tran.css" rel="stylesheet">
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Matemasie&family=New+Amsterdam&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 </style>
@@ -17,7 +18,7 @@
   <header>
     <div class="hstack gap-3">
       <div class="p-2" style="font-family:Matemasie;"><span style="color:red;font-size:2.1em;font-weight:500;">D</span>osa<span style="color:red;font-size:2.1em;font-weight:500;">B</span>ite</div>
-      <div class="p-2 ms-auto pp-2"><a class="rr"  href="home.php">Home</a></div>
+      <div class="p-2 ms-auto pp-2"><a class="rr"  href="index.php">Home</a></div>
       <div class="vr"></div>
       <div class="p-2 pp-2 "> <a class="rr" href="
            <?php 

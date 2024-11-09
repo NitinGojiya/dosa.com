@@ -19,12 +19,12 @@
 
 <body>
     <section class="bill">
-        <div id="contentToPrint">
+        <div id="content">
 
 
             <div>
                 <h1>:Order is Placed:</h1><br>
-               
+
             </div>
             <div>
                 <table class="table">
@@ -43,7 +43,7 @@
                         include 'dataconnect.php';
                         session_start();
                         $user = $_SESSION['user'];
-
+                        
 
                         $sql = "SELECT * FROM `cart` where username='$user' ";
                         $result = mysqli_query($conn, $sql);
@@ -76,21 +76,31 @@
         </div>
         <div>
             <form action="cart_del.php" method="post">
-            <button onclick="printDiv('contentToPrint')" name="bill">Print Bill</button>
+            <button  name="bill">placed Order</button>
+                <button id="downloadPdf" name="bill">Download Bill or placed Order</button>
             </form>
-        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+            <div id="order"> <?php echo "bill_".$user; ?></div>
             <script>
-                function printDiv(divId) {
-                    var divContent = document.getElementById(divId).innerHTML;
-                    var printWindow = window.open('', '', 'height=600,width=800');
-                    printWindow.document.write('<html><head><title>Bill</title>');
-                    printWindow.document.write('</head><body>');
-                    printWindow.document.write(divContent);
-                    printWindow.document.write('</body></html>');
-                    printWindow.document.close();
-                    printWindow.print();
-                }
+                document.getElementById('downloadPdf').addEventListener('click', function() {
+                    const {
+                        jsPDF
+                    } = window.jspdf;
+                    const doc = new jsPDF();
+
+                    // Get the plain text content of the div
+                    const content = document.getElementById('content').innerText;
+
+                    // Add the text content to the PDF
+                    doc.text(content, 10, 10);
+                    const orderid = document.getElementById('order').innerText;
+
+
+                    doc.save(orderid + '.pdf');
+
+                });
             </script>
+
         </div>
 
     </section>

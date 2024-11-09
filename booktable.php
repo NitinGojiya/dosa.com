@@ -88,7 +88,7 @@ background: linear-gradient(90deg, rgba(0,27,36,1) 5%, rgba(136,107,85,1) 47%, r
     <label>Name</label>
     <input type="text" class="input" placeholder="Enter yout Name" name="name">
     <label>Mobile</label>
-    <input type="password" class="input" placeholder="Mobile" name="mo"> 
+    <input type="text" class="input" placeholder="Mobile" name="mo"> 
   
     <label for="time_input">Select a time:</label>
     <input type="time" id="time_input" class="input" name="time_input" value="<?php echo $time_value; ?>">
@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $time_value = isset($_POST['time_input']) ? $_POST['time_input'] : date('h:i');
     $tt=htmlspecialchars($time_value);
     $name=$_POST['name'];
-    $name=$_POST['mo'];
+    $mo=$_POST['mo'];
     $status="book";
     // echo "<p>You selected: " . $tt . "</p>";
     $sql="UPDATE `reservation` SET `name`='$name',`mo`='$mo',`time`='$tt',`status`='$status' WHERE tbno='$tbno'";

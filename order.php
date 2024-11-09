@@ -35,7 +35,7 @@
                     if ($_SESSION['login'] == true) {
 
 
-                        $sql = "SELECT * FROM `admin_cart` where username='$user' and action='Not Accept'";
+                        $sql = "SELECT * FROM `admin_cart` where username='$user' and aaction='Not Accept'";
                         $result = mysqli_query($conn, $sql);
 
                         while ($row = mysqli_fetch_array($result)) {
@@ -48,7 +48,7 @@
                                 <td class="table-light"><?php echo $row['qty']; ?></td>
 
                                 <td class="table-dark"><?php echo $row['subtotal']; ?></td>
-                                <td class="table-light" style="text-align: center;"><?php echo $row['action']; ?></td>
+                                <td class="table-light" style="text-align: center;"><?php echo $row['aaction']; ?></td>
                             </tr>
 
                     <?php }
@@ -88,7 +88,7 @@
 
                             <tr>
                                 <th scope="row" class="table-light"><?php 
-                                $oid="2024".$row['id'];
+                                $oid=$row['id'];
                                 echo $oid; ?></th>
                                 <td class="table-primary"><?php echo $row['dat']; ?></td>
                               

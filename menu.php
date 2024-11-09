@@ -6,7 +6,7 @@
     <title>Menu</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
+
 </head>
 <body>
 <?php
@@ -22,6 +22,7 @@
     echo "<center><h1 style='border-bottom:2px black solid;'><span style='color:red;'>W</span>elcome ".$_SESSION['name']." Order food And Enjoy</h1></center>" ;
     ?>
    </section>
+   
 <section class="menu">
   
     
@@ -35,7 +36,7 @@
   <div class="card">
 
   <div class="card-img">
-    <img src="<?php echo $row['photo'];?>" height="100px">
+    <img src="<?php echo $row['photo'];?>" height="100px" width="160px">
   </div>
   <div class="card-info">
     <p class="text-title"><?php echo $row['name'];?> </p>

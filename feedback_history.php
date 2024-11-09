@@ -108,7 +108,7 @@
                     if ($_SESSION['login'] == true) {
 
 
-                        $sql = "SELECT * FROM `final_order` where username='$user' and ostatus='Accept'";
+                        $sql = "SELECT * FROM `final_order` where username='$user' and ostatus='Delivered' ORDER BY `final_order`.`id` DESC";
                         $result = mysqli_query($conn, $sql);
 
                         while ($row = mysqli_fetch_array($result)) {
@@ -116,12 +116,13 @@
 
                             <tr>
                                 <th scope="row" class="table-light"><?php
-                                                                    $oid = "2024" . $row['id'];
+                                                                    $oid = $row['id'];
                                                                     echo $oid; ?></th>
                                 <td class="table-primary"><?php echo $row['dat']; ?></td>
 
                                 <td class="table-dark"><?php echo $row['total']; ?></td>
                                 <td class="table-primary">
+                                    <?php if(empty($row['feedback'])){?>
                                     <form action="feedback.php" method="post">
                                 <textarea cols="40" placeholder="Enter your Answer" name="feed" required></textarea>
                                     <input type="text" value="<?php echo $row['id'];?>" name="id" hidden>
@@ -145,6 +146,7 @@
                                         }
                                     </script>
                                     </form>
+                                    <?php }else{echo $row['feedback'];}?>
                                 </td>
 
                             </tr>
