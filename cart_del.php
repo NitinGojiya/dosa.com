@@ -19,7 +19,7 @@ while ($row = mysqli_fetch_array($result)) {
     $subtotal=$row['subtotal'];
     $username=$row['username'];
     $action="Not Accept";
-    $sql="INSERT INTO `admin_cart`( `name`, `price`, `qty`, `photo`, `subtotal`, `username`,`action`) VALUES ('$name','$price','$qty','$photo','$subtotal','$username','$action')";
+    $sql="INSERT INTO `admin_cart`( `name`, `price`, `qty`, `photo`, `subtotal`, `username`,`aaction`) VALUES ('$name','$price','$qty','$photo','$subtotal','$username','$action')";
     $result1=mysqli_query($conn,$sql);
 }
 //    delete 

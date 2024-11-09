@@ -149,8 +149,8 @@
     <section class="mlogin">
    
 <div class="form-container">
-	<p class="title">Login</p>
-	<form class="form" action="login.php" method="post">
+	<p class="title">Admin</p>
+	<form class="form" action="alogin.php" method="post">
 		<div class="input-group">
 			<label for="username">Username</label>
 			<input type="text" name="username" id="username" placeholder="">
@@ -201,24 +201,23 @@ if(isset($_POST['login']))
     $result1 = mysqli_query($conn, $sql1);
   $user=$_POST["username"];
   $pass=$_POST["password"];
-
-    while ($row = mysqli_fetch_array($result1)) {
-    if($user==$row['username']&&$pass==$row['password'])
+  $rowu="admin@123";
+  $rowp="123";
+ 
+    if($user==$rowu &&$pass==$rowp)
     {
-       session_start();
-       $_SESSION['user']=$user;
-       $_SESSION['name']=$row['name'];
-       $_SESSION['login']=true;
+      
 
         // header("location:menu.php");
            
-        echo '<script>window.location.href = "menu.php";</script>';
-      
+        echo '<script>window.location.href = "admin/aadmin.php";</script>';
     }
-  
+    else
+    {
+      echo "<script>alert('password or username not match please contact your administration');</script>";
     }
-  
     
+  
 }
    
 ?>

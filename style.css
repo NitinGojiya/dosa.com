@@ -115,14 +115,15 @@ header div a{
 .menu{
     margin-top: 70px;
     margin-bottom: 50px;
+    margin-left: 200px;
     margin-left: 100px;
     width: 1000px;
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     flex-wrap: wrap ;
     gap: 30px;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content:center;
 }
 
 .cart_item{

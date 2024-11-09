@@ -10,4 +10,4 @@ $sql2 = "UPDATE `final_order` SET `feedback` = '$feed' WHERE `final_order`.`id` 
         //echo "<script>alert('done..');</script>";
         echo '<script>window.location.href = "feedback_history.php";</script>';
     }
-?>ss
+?>
